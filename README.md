@@ -48,7 +48,7 @@ git push origin my-feature-branch
 5. Create a new pull request.
 
 ## TODOs
-1.  create venv 
+1.  create venv (done)
 1.  add config file (yaml) for reconstruction parameters  # p=0.5, lamb=0.01, method="kotre", perm=1, jac_normalized=Truep=0.5, lamb=0.01, method="kotre", perm=1, jac_normalized=True
 1.  post-process result to extract some quantitative measure (RMSE) of how well did the recon perform 
 1.  use mlflow to do different experiment with different config 
