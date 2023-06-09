@@ -47,6 +47,15 @@ git push origin my-feature-branch
 ```
 5. Create a new pull request.
 
+## TODOs
+create venv 
+1.  add config file (yaml) for reconstruction parameters  # p=0.5, lamb=0.01, method="kotre", perm=1, jac_normalized=Truep=0.5, lamb=0.01, method="kotre", perm=1, jac_normalized=True
+1.  post-process result to extract some quantitative measure (RMSE) of how well did the recon perform 
+1.  use mlflow to do different experiment with different config 
+1.  add preprocessing step before recon and postprocessing step after recon with configs: any random function would do p=0.5, lamb=0.01, method="kotre", perm=1, jac_normalized=True
+1.  build docker containers for each of these steps and orchestrate with Kubernetes
+
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
