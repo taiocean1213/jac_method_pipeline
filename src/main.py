@@ -4,10 +4,9 @@ import PyeitClass
 # TODO define the constants that are used
 pkl_rel_path = "" # relative path of the pkl file
 
-# This is the entry point of the 
-# entire python software
-if __name__ == "__main__":
-    
+
+# main function
+def main():
     # instantiate the class that
     # acts as a wrapper for the 
     # Pyeit algorithm
@@ -32,3 +31,17 @@ if __name__ == "__main__":
     # output directory
     pyeitObject.plot()
     
+    # return the function
+    return
+
+
+
+
+    
+
+
+
+# This is the entry point of the 
+# entire python software
+if __name__ == "__main__":
+    main()
