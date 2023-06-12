@@ -7,6 +7,10 @@ pkl_rel_path = "" # relative path of the pkl file
 
 # main function
 def main():
+    """
+    This main function is the 
+    entry point of the python project
+    """
     # instantiate the class that
     # acts as a wrapper for the 
     # Pyeit algorithm
@@ -33,12 +37,6 @@ def main():
     
     # return the function
     return
-
-
-
-
-    
-
 
 
 # This is the entry point of the 
