@@ -1,9 +1,14 @@
 # Import the PyeitClass
-import PyeitClass
+from PyeitClass import PyeitClass
 
 # TODO define the constants that are used
-pkl_rel_path = "" # relative path of the pkl file
-
+config_file_path = "../cache/config.yaml"
+data_rel_path = "../cache/simulated_data.pkl" # relative path of the pkl file
+reconstruction_algorithm_options = ["JAC"]
+reconstruction_algorithm_choice = reconstruction_algorithm_options[0]
+square_image_window_pixel_size = 256
+image_output_format_options = ["matplotlib", "jpeg", "bmp"]
+image_output_format = image_output_format_options[0]
 
 # main function
 def main():
@@ -11,29 +16,30 @@ def main():
     This main function is the 
     entry point of the python project
     """
+    # 
+    
     # instantiate the class that
     # acts as a wrapper for the 
     # Pyeit algorithm
-    pyeitObject = PyeitClass()
-    
-    
+    pyeitObject = PyeitClass(config_file_path)
     
     # Now call the method that loads
     # the data to the class via pickle
-    pyeitObject.load(pkl_rel_path)
+    pyeitObject.load(data_rel_path)
     
     # Then set up the meshes that are 
     # used to also perform the image 
     # reconstruction in this method call
-    pyeitObject.reconstruct()
+    pyeitObject.reconstruct(reconstruction_algorithm_choice)
     
     # Over here, we render the image to 
-    # be saved later
-    pyeitObject.render()
+    # be saved later (i.e. basically store the 
+    # image generated from the pyEIT using )
+    pyeitObject.render(square_image_window_pixel_size)
     
     # Now plot the image to the 
     # output directory
-    pyeitObject.plot()
+    pyeitObject.plot(image_output_format)
     
     # return the function
     return
