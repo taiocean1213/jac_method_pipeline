@@ -3,4 +3,5 @@ lamb: 0.01
 method: "kotre"
 perm: 1
 jac_normalized: true
-
+n_el: 16
+h0: 0.1
