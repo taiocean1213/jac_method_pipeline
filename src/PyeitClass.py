@@ -86,11 +86,10 @@ class PyeitClass:
         except Exception as e:
             print(f"Error performing image reconstruction: {e}")
 
-
+    # TODO: need to implement
     def render(self, square_window_size):
-        # Render the image
-        plt.imshow(self.image)
+        pass
 
-    def plot(self):
-        # Save the image to the output directory
-        plt.savefig('output_image.png')
+    # TODO: need to implement
+    def plot(self,image_output_format):
+        pass
