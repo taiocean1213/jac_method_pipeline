@@ -1,0 +1,6 @@
+p: 0.5
+lamb: 0.01
+method: "kotre"
+perm: 1
+jac_normalized: true
+
