@@ -72,7 +72,8 @@ instance/
 docs/_build/
 
 # output directory
-output/
+output/*
+!output/.gitkeep
 
 # PyBuilder
 .pybuilder/

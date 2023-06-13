@@ -1,15 +1,15 @@
 # Import the PyeitClass
 from PyeitClass import PyeitClass
-
+import os
 # TODO define the constants that are used
-config_file_path = "c../whichache/config.yaml"
-data_rel_path = "cache/simulated_data.pkl" # relative path of the pkl file
-reconstruction_algorithm_options = ["JAC"]
+config_file_path = os.path.join( os.path.dirname(__file__),"../cache/config.yaml")
+data_rel_path = os.path.join( os.path.dirname(__file__),"../cache/simulated_data.pkl") # relative path of the pkl file
+reconstruction_algorithm_options = ["kotre"]
 reconstruction_algorithm_choice = reconstruction_algorithm_options[0]
 square_image_window_pixel_size = 256
-image_output_format_options = ["matplotlib", "jpeg", "bmp"]
+image_output_format_options = ["png", "jpeg", "bmp"]
 image_output_format = image_output_format_options[0]
-
+save_fig_path = os.path.join( os.path.dirname(__file__),"../output/image.png") 
 # main function
 def main():
     """
@@ -40,7 +40,7 @@ def main():
     
     # Now plot the image to the 
     # output directory
-    pyeitObject.plot(image_output_format)
+    pyeitObject.plot(save_fig_path,image_output_format)
     
     # return the function
     return
